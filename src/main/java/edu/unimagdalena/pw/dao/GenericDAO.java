@@ -9,12 +9,16 @@ public interface GenericDAO <E, PK extends Serializable>{
 
 	void save(E entity);
 
+	List<E> findAll() throws InstanceNotFoundException;
+	
+	void remove(PK id) throws InstanceNotFoundException;
+	
 	E find(PK id) throws InstanceNotFoundException;
 
 	boolean exists(PK id);
 
-	void remove(PK id) throws InstanceNotFoundException;
 	
-	List<E> findAll() throws InstanceNotFoundException;
+	
+	
 
 }
