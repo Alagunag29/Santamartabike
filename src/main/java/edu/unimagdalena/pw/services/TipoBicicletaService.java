@@ -14,7 +14,7 @@ import edu.unimagdalena.pw.model.TipoBicicleta;
 @Transactional
 public class TipoBicicletaService implements ITipoBicicletaService{
 	@Autowired
-	TipoBicicletaDAO tipoBicicletaDao;
+	private TipoBicicletaDAO tipoBicicletaDao;
 	
 	@Override
 	public void crearTipoBicicleta(TipoBicicleta tipoBicicleta){
@@ -53,11 +53,13 @@ public class TipoBicicletaService implements ITipoBicicletaService{
 		return tipoBicicleta;
 	}
 	
+	@Override
 	public boolean existeTipoBicicleta(TipoBicicleta tipoBicicleta){
 		Long id = new Long(tipoBicicleta.getIdtipo_bicicleta());
 		return tipoBicicletaDao.exists(id);
 	}
 	
+	@Override
 	public TipoBicicleta buscarTipoBicicletaNombre(String nombre){
 		TipoBicicleta tipoBicicleta = null;
 		try {
