@@ -47,8 +47,6 @@ public class TipoBicicletaController {
 		return new ResponseEntity<TipoBicicleta>(tipoBicicleta, HttpStatus.CREATED);
 	}
 	
-	public ResponseEntity<TipoBicicleta> updateTipoBici (@PathVariable("id" long id, @RequestBody TipoBicicleta){
-		TipoBicicleta tipoBicicleta = tipoBicicletaService.buscarTipoBicicleta(id);
-	}
+
 	
 }
