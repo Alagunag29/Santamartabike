@@ -12,17 +12,17 @@ import javax.persistence.Table;
 public class TipoBicicleta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int idtipo_bicicleta;
+	private Long idtipo_bicicleta;
 	@Column
 	private String tipo_bicicleta;
 	@Column(length = 255)
 	private String descripcion;
 	
 	
-	public int getIdtipo_bicicleta() {
+	public Long getIdtipo_bicicleta() {
 		return idtipo_bicicleta;
 	}
-	public void setIdtipo_bicicleta(int idtipo_bicicleta) {
+	public void setIdtipo_bicicleta(Long idtipo_bicicleta) {
 		this.idtipo_bicicleta = idtipo_bicicleta;
 	}
 	public String getTipo_bicicleta() {
